@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Xcode 7.0" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="T_ChatMessage" representedClassName="T_ChatMessage" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isself" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="msgdate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msgid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msgsendstate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="msgType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="senderid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="T_DEPT" representedClassName="T_DEPT" syncable="YES">
+        <attribute name="dept_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dept_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="disp_sn" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="org_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="p_dept_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="py" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="T_friendlist" representedClassName="T_friendlist" syncable="YES">
+        <attribute name="areaname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fpy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="nameremark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nickname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="py" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="T_GroupInfo" representedClassName="T_GroupInfo" syncable="YES">
+        <attribute name="groupadmin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupimg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupname" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="T_GroupMember" representedClassName="T_GroupMember" syncable="YES">
+        <attribute name="groupid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="memberid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="memberimg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="membername" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="T_Member" representedClassName="T_Member" syncable="YES">
+        <attribute name="dept_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fpy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="nick_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="org_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pic_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="py" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="T_MesaageList" representedClassName="T_MesaageList" syncable="YES">
+        <attribute name="isdisturb" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="istop" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="msgcontent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msgdate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msgico" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msgid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msgmark" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="msgstate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="msgtitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msgtype" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="senderid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="T_ORG" representedClassName="T_ORG" syncable="YES">
+        <attribute name="disp_sn" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="org_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="org_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="p_org_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="py" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="T_WeApp" representedClassName="T_WeApp" syncable="YES">
+        <attribute name="appCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appIco" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appIndex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="appType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chatEnable" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="defSubType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="menuEnable" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remindType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unsubEnable" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="T_WeApp_Detail" representedClassName="T_WeApp_Detail" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="msgid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="senddt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weapp_from" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="weapptype" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="T_ChatMessage" positionX="-18" positionY="135" width="128" height="195"/>
+        <element name="T_DEPT" positionX="-27" positionY="90" width="128" height="135"/>
+        <element name="T_friendlist" positionX="-36" positionY="9" width="128" height="165"/>
+        <element name="T_GroupInfo" positionX="-18" positionY="162" width="128" height="105"/>
+        <element name="T_GroupMember" positionX="-9" positionY="171" width="128" height="105"/>
+        <element name="T_Member" positionX="-9" positionY="117" width="128" height="195"/>
+        <element name="T_MesaageList" positionX="-18" positionY="144" width="128" height="210"/>
+        <element name="T_ORG" positionX="-36" positionY="72" width="128" height="120"/>
+        <element name="T_WeApp" positionX="-18" positionY="162" width="128" height="210"/>
+        <element name="T_WeApp_Detail" positionX="-9" positionY="171" width="128" height="150"/>
+    </elements>
+</model>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanCodeView">
+            <connections>
+                <outlet property="backimg" destination="3SB-6g-fpF" id="SRH-oL-Bjp"/>
+                <outlet property="navbar" destination="Dv7-LM-hQD" id="qhk-bY-Kcx"/>
+                <outlet property="view" destination="SuJ-gY-iNe" id="KkL-gL-6w0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="SuJ-gY-iNe">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3SB-6g-fpF">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dv7-LM-hQD">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="58"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="58" id="Utx-0X-Ryy"/>
+                    </constraints>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Dv7-LM-hQD" firstAttribute="top" secondItem="SuJ-gY-iNe" secondAttribute="top" id="5ql-ey-Ugu"/>
+                <constraint firstAttribute="trailing" secondItem="3SB-6g-fpF" secondAttribute="trailing" id="JdA-0d-534"/>
+                <constraint firstItem="3SB-6g-fpF" firstAttribute="leading" secondItem="SuJ-gY-iNe" secondAttribute="leading" id="JnL-nw-AIR"/>
+                <constraint firstItem="Dv7-LM-hQD" firstAttribute="leading" secondItem="SuJ-gY-iNe" secondAttribute="leading" id="SvT-UD-sR7"/>
+                <constraint firstItem="3SB-6g-fpF" firstAttribute="top" secondItem="SuJ-gY-iNe" secondAttribute="top" id="gxY-Ki-WCd"/>
+                <constraint firstAttribute="bottom" secondItem="3SB-6g-fpF" secondAttribute="bottom" id="oBX-gB-xFr"/>
+                <constraint firstAttribute="trailing" secondItem="Dv7-LM-hQD" secondAttribute="trailing" id="wbs-A8-hXa"/>
+            </constraints>
+            <point key="canvasLocation" x="78" y="-519"/>
+        </view>
+    </objects>
+</document>
