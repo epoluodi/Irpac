@@ -9,7 +9,7 @@
 #import "BaseHttp.h"
 #import "AppCommon.h"
 #define DOWNFILE [NSString stringWithFormat:@"%@media/download",AppUrl]
-#define UPLOADFILE [NSString stringWithFormat:@"%@media/upload",AppUrl]
+#define UPLOADFILE [NSString stringWithFormat:@"%@upload",AppUrl]
 
 #define CONTENT_TYPE_FORM_DATA @"multipart/form-data"
 #define CONTENT_TYPE_JPG @"image/jpg"

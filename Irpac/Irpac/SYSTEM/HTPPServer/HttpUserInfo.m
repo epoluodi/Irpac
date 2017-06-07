@@ -33,24 +33,6 @@
     [[AppInfo getInstance] getUserInfo].officeName =         [d objectForKey:@"officeName"];
     [[AppInfo getInstance] getUserInfo].gh =         [d objectForKey:@"gh"];
     
-
-    
-    
-//    if (![STCommon CheckFileForcache:[[AppInfo getInstance] getUserInfo].photo filetype:@".jpg"]){
-//        BACK(^{
-//            HttpFile *httpfile = [[HttpFile alloc] init:JPG];
-//            [httpfile downloadFile:[[AppInfo getInstance] getUserInfo].photo fileSize:@"_120"];
-//        });
-//        BACK(^{
-//            
-//            HttpFile *httpfile = [[HttpFile alloc] init:JPG];
-//            [httpfile downloadFile:[[AppInfo getInstance] getUserInfo].photo fileSize:@"_40"];
-//        });
-//        BACK(^{
-//            HttpFile *httpfile = [[HttpFile alloc] init:JPG];
-//            [httpfile downloadFile:[[AppInfo getInstance] getUserInfo].photo fileSize:@""];
-//        });
-//    }
     return  rd;
 }
 

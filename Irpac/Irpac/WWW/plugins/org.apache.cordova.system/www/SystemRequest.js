@@ -39,6 +39,12 @@ cordova.define("com.suypower.stereo.suehome.CordovaPlugin.system.SystemRequest",
 
            exec(getRequestHeaderCallBackSuccess, null, "SystemRequest", "getLoginUser", [null]);
         },
+        setLoginUser: function(arg) {
+               
+        exec(null, null, "SystemRequest", "setLoginUser", [arg]);
+        },
+               
+               
         //得到APP信息
         getAppInfo: function(jsonparams,getRequestHeaderCallBackSuccess,getRequestHeaderCallBackFail) {
            exec(getRequestHeaderCallBackSuccess, getRequestHeaderCallBackFail, "SystemRequest", "getAppInfo", [jsonparams]);
@@ -49,8 +55,16 @@ cordova.define("com.suypower.stereo.suehome.CordovaPlugin.system.SystemRequest",
         },
         
         //打开app store
-        toast: function(jsonparams) {
+        openAppStore: function(jsonparams) {
         exec(null, null, "SystemRequest", "openAppStore", [jsonparams]);
+        },
+           
+        setBadgeItemCount: function(jsonparams) {
+        exec(null, null, "SystemRequest", "setBadgeItemCount", [jsonparams]);
+        },
+               
+        exitSystem: function() {
+        exec(null, null, "SystemRequest", "exitSystem", [null]);
         },
     };
 

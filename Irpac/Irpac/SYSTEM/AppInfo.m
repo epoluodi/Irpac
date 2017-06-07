@@ -64,13 +64,8 @@ static AppInfo *_self;
     {
         _userinfo.loginName =[USER_DEFAULT objectForKey:@"username"];
         _userinfo.loginPwd =[USER_DEFAULT objectForKey:@"userpwd"];
-        NSString *_strtoken = [USER_DEFAULT objectForKey:@"token"];
-        if (_strtoken)
-        {
-            void *_token = malloc(_strtoken.length);
-            strcpy(_token, [_strtoken UTF8String ]);
-            appRunInfo.TOEKN=_token;
-        }
+        _token = [USER_DEFAULT objectForKey:@"token"];
+     
     }
     
     
@@ -102,8 +97,7 @@ static AppInfo *_self;
 
 -(void)ClearInfo
 {
-    if (appRunInfo.TOEKN != NULL)
-        free((void *)appRunInfo.TOEKN);
+
     _userinfo=  nil;
     _self =nil;
     

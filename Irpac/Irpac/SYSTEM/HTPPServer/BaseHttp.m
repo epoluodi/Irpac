@@ -16,8 +16,9 @@
     self = [super init];
     _http = [[HttpClass alloc] init];
     [_http setIsHead:YES];
-    if ([[AppInfo getInstance] getAppRunInfo]->TOEKN != NULL)
-        [_http addHeadString:@"token" value:[NSString stringWithUTF8String:[[AppInfo getInstance] getAppRunInfo]->TOEKN] ];
+
+    if ([AppInfo getInstance].token)
+        [_http addHeadString:@"token" value:[AppInfo getInstance].token];
     
 
     [_http addHeadString:@"deviceID" value:[[UIDevice currentDevice].identifierForVendor UUIDString] ];

@@ -37,3 +37,7 @@ extern NSString *const SHAREINFO;
 
 //web图片预览
 extern NSString *const WEBPREVIEW;
+
+extern NSString *const TABBARBADGE;
+
+extern NSString *const EXITSYSTEM;

@@ -21,11 +21,17 @@
 
 //获取用户信息
 -(void)getLoginUser:(CDVInvokedUrlCommand *)command;
-
+-(void)setLoginUser:(CDVInvokedUrlCommand *)command;
 
 //快捷提示
 -(void)toast:(CDVInvokedUrlCommand *)command;
 
 //提供打开appstore 页面
 -(void)openAppStore:(CDVInvokedUrlCommand *)command;
+
+//设置角标
+-(void)setBadgeItemCount:(CDVInvokedUrlCommand *)command;
+
+//退出系统
+-(void)exitSystem:(CDVInvokedUrlCommand *)command;
 @end

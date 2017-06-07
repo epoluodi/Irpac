@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
+    nickimg.hidden=YES;
     [nickimg setRadius];
     
     btnlogin.layer.cornerRadius=4;
@@ -39,14 +39,14 @@
     [loginview addSubview:_lineview];
     
     UIImage *back1 = [PublicCommon createImageWithColor:APPCOLOR Rect:CGRectMake(0, 0, 100, 100)];
-    UIImage *back2 = [PublicCommon createImageWithColor:UIColorFromRGB(0x85d0f8) Rect:CGRectMake(0, 0, 100, 100)];
+    UIImage *back2 = [PublicCommon createImageWithColor:UIColorFromRGB(0x1b82c0) Rect:CGRectMake(0, 0, 100, 100)];
     
     [btnlogin setBackgroundImage:back1 forState:UIControlStateNormal];
     [btnlogin setBackgroundImage:back2 forState:UIControlStateHighlighted];
     
 //    username.inputAccessoryView = [PublicCommon getInputToolbar:self sel:@selector(closeInputboard)];
 //    userpwd.inputAccessoryView = [PublicCommon getInputToolbar:self sel:@selector(closeInputboard)];
-    username.delegate = self;
+//    username.delegate = self;
     
     [username setAutocapitalizationType:UITextAutocapitalizationTypeNone];
     //显示 登录名称

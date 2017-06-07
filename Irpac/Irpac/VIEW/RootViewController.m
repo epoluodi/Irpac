@@ -24,13 +24,23 @@
     mainnavviewcontroller = (MainRootViewController *)self.navigationController;
     mainnavviewcontroller.rootViewController = self;
     
-
+    messageTabBatItem = self.tabBar.items[1];
 
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)setmessageTabBatItembadgeValue:(NSString *)count
+{
+  
+    if ([count isEqualToString:@"0"])
+        messageTabBatItem.badgeValue =nil;
+    else
+        messageTabBatItem.badgeValue =count;
+
 }
 
 

@@ -11,6 +11,7 @@
 #import "FTPopOverMenu.h"
 #import <Common/PublicCommon.h>
 #import "WebPreviewViewController.h"
+#import "RootViewController.h"
 
 
 @interface CordovaWebViewController ()
@@ -544,7 +545,26 @@
 
         
         
+    }else if ([Action isEqualToString:TABBARBADGE])
+    {
+        arg = [command.arguments objectAtIndex:0];
+        
+        NSString *badgecount =[arg objectForKey:@"badge"];
+        
+        
+        MAIN(^{
+            [((RootViewController *)(self.tabBarController)) setmessageTabBatItembadgeValue:badgecount];
+      
+        });
+    }else if ([Action isEqualToString:EXITSYSTEM])
+    {
+        MAIN(^{
+            [((MainRootViewController *)(self.navigationController)) LogOut];
+    
+        });
     }
+    
+    
 }
 
 #pragma mark 图片选择

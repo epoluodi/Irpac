@@ -46,16 +46,31 @@
                               [[AppInfo getInstance] getUserInfo].nickName,@"nickName",
                               [[AppInfo getInstance] getUserInfo].officeName,@"officeName",
                               [[AppInfo getInstance] getUserInfo].gh,@"gh",
-                              [NSString stringWithUTF8String:[[AppInfo getInstance] getAppRunInfo]->TOEKN],@"token",
+                              [AppInfo getInstance].token,@"token",
                               @"2",@"deviceType",nil];
         
         pluginResult  =[CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:dict];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
     }];
-
-
-    
 }
+-(void)setLoginUser:(CDVInvokedUrlCommand *)command
+{
+    NSDictionary *dict =command.arguments[0];
+    
+    if ([dict objectForKey:@"avatar"])
+    {
+        [[AppInfo getInstance] getUserInfo].photo =[dict objectForKey:@"avatar"];
+    }
+    if ([dict objectForKey:@"nickName"])
+    {
+        [[AppInfo getInstance] getUserInfo].nickName =[dict objectForKey:@"nickName"];
+    }
+    if ([dict objectForKey:@"officeName"])
+    {
+        [[AppInfo getInstance] getUserInfo].officeName =[dict objectForKey:@"officeName"];
+    }
+}
+
 -(void)toast:(CDVInvokedUrlCommand *)command
 {
     NSString *info = command.arguments[0];
@@ -82,6 +97,22 @@
                 }
             }];
         });
+    }];
+}
+
+-(void)setBadgeItemCount:(CDVInvokedUrlCommand *)command
+{
+    CDVViewController *cdv = (CDVViewController *)self.viewController;
+    [self.commandDelegate runInBackground:^{
+        [cdv OnMessage:TABBARBADGE command:command];
+    }];
+}
+
+-(void)exitSystem:(CDVInvokedUrlCommand *)command
+{
+    CDVViewController *cdv = (CDVViewController *)self.viewController;
+    [self.commandDelegate runInBackground:^{
+        [cdv OnMessage:EXITSYSTEM command:command];
     }];
 }
 @end

@@ -71,6 +71,8 @@
 <a class="long_button" onclick="click21()">选择联系人</a>
 <a class="long_button" onclick="click22()">分享</a>
 <a class="long_button" onclick="click23()">预览web图片</a>
+<a class="long_button" onclick="click24()">设置角标</a>
+<a class="long_button" onclick="click25()">退出登录</a>
 <a class="long_button" href="stereo://prefile/ea705893-53d2-11e6-9b9a-0025118f5e64">显示个人详细信息</a>
 
 <a class="long_button" onclick="click19()">扫描</a>
@@ -480,5 +482,20 @@ function click23(){
                         
                               });
 }
+
+function click24(){
+    
+    stereo.system.setBadgeItemCount({
+                              badge:"1"
+                              });
+}
+
+function click25(){
+    
+    stereo.system.exitSystem();
+}
+
+
+
 </script>
 </html>

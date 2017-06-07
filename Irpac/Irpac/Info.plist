@@ -28,10 +28,10 @@
 			<key>CFBundleURLIconFile</key>
 			<string></string>
 			<key>CFBundleURLName</key>
-			<string>com.suypower.suehome</string>
+			<string>com.suypower.Irpac</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>suehome</string>
+				<string>Irpac</string>
 			</array>
 		</dict>
 		<dict>

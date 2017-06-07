@@ -16,5 +16,7 @@
 
 
 
+-(void)setmessageTabBatItembadgeValue:(NSString *)count;
+
 
 @end

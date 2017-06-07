@@ -9,12 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "UserInfo.h"
-#import "Emj.h"
-#define DBVER 6
+
+
 
 
 struct AppRunInfo {
-    const char * TOEKN;
+    char * TOEKN;
     int deviceType;
 };
 
@@ -28,6 +28,7 @@ struct AppRunInfo {
 
 @property (copy,nonatomic)UIFont *titleFont;
 @property (copy,nonatomic)UIFont *subFont;
+@property (copy,nonatomic)NSString *token;
 @property (assign)int fontSize;
 
 

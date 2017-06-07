@@ -25,8 +25,8 @@
     [_http addParamsString:@"pwd" values:pwd];
     [_http addParamsString:@"deviceId" values:[[UIDevice currentDevice].identifierForVendor UUIDString]];
     [_http addParamsString:@"deviceType" values:@"1"];
-    if ([[AppInfo getInstance] getAppRunInfo]->TOEKN !=NULL)
-        [_http addHeadString:@"token" value:[NSString stringWithUTF8String:[[AppInfo getInstance] getAppRunInfo]->TOEKN] ];
+    if ([AppInfo getInstance].token)
+        [_http addHeadString:@"token" value:[AppInfo getInstance] .token];
     return self;
 }
 
@@ -44,13 +44,10 @@
         
         NSDictionary *d = rd.returnData;
         [[AppInfo getInstance] getUserInfo].userId =[d objectForKey:@"userId"];
-        if ([[AppInfo getInstance] getAppRunInfo]->TOEKN == NULL)
-            free(  (void *)   [[AppInfo getInstance] getAppRunInfo]->TOEKN);
+      
+
+        [AppInfo getInstance].token=[d objectForKey:@"token"] ;
         
-        void *mtoken =malloc([[d objectForKey:@"token"] length]);
-        strcpy(mtoken, [[d objectForKey:@"token"] UTF8String ]);
-        [[AppInfo getInstance] getAppRunInfo]->TOEKN =mtoken;
-        printf("令牌 %s",[[AppInfo getInstance] getAppRunInfo]->TOEKN);
 
     }
     

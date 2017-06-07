@@ -27,7 +27,8 @@
                 ReturnData *rd =  [httpfile uploadFile:mediaid mediaType:@"02" imageType:@"02"];
                 if (rd.returnCode !=0 )
                     ret=NO;
-                [fileids addObject:[rd.returnData objectForKey:@"mediaId"]];
+                else
+                    [fileids addObject:[rd.returnData objectForKey:@"fileId"]];
             });
         }
         

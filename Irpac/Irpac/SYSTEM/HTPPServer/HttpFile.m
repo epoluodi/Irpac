@@ -87,7 +87,7 @@
     
     if (!filedata)
         return nil;
-    NSData * data = [_http UploadFile:@"uploadfile" FileData:filedata contenttype:contenttype filetype:strfiletype];
+    NSData * data = [_http UploadFile:mediaid FileData:filedata contenttype:contenttype filetype:strfiletype];
     ReturnData *rd = [ReturnData getReturnDatawithData:data dataMode:YES];
 
     NSLog(@"上传返回 %@",    rd.returnData);

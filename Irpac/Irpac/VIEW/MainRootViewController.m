@@ -59,13 +59,107 @@
     
     self.delegate = self;
     [self.navigationBar addSubview:labtitle];
-
-    
+    NSNotificationCenter *notiCenter = [NSNotificationCenter defaultCenter];
+    [notiCenter addObserver:self selector:@selector(webViewControllerCloseNotification:) name:Notification_CLOSEVIEWCONTROLLER object:nil];
+    [notiCenter addObserver:self selector:@selector(webViewControllerCloseNotification:) name:Notification_CLOSEVIEWCONTROLLEREVENT object:nil];
 
     
     
 }
 
+
+-(void)webViewControllerCloseNotification:(NSNotification *)notification
+{
+    NSLog(@"通知 %@",notification);
+    CordovaWebViewController *cordovaview;
+    if ([notification.name isEqualToString:@"closeViewController"])
+    {
+        if (self.viewControllers.count==2)
+        {
+            RootViewController *rootview = self.viewControllers[0];
+            cordovaview = (CordovaWebViewController *)rootview.selectedViewController;
+        }
+        else
+        {
+            cordovaview =self.viewControllers[self.viewControllers.count -2];
+        }
+        if (![[cordovaview class] isSubclassOfClass:[CordovaWebViewController class]])
+            return;
+        
+        [cordovaview callJS:[NSString stringWithFormat:@"%@()",[notification.userInfo objectForKey:@"function"]]];
+    }else if ([notification.name isEqualToString:@"closeViewControllerNotification"])
+    {
+        NSDictionary *dict = notification.userInfo;
+        if ([[dict objectForKey:@"eventType"] isEqualToString:@"add"])
+        {
+            isCloseEvent=YES;
+            _callJS = [[dict objectForKey:@"function"] copy];
+            _jsArg =[[dict objectForKey:@"arg"] copy];
+            if (_jsArg != [NSNull null]){
+                if ([NSStringFromClass([[dict objectForKey:@"arg"] class]) isEqualToString:@"__NSDictionaryM"])
+                {
+                    NSData * d = [NSJSONSerialization dataWithJSONObject:[dict objectForKey:@"arg"] options:NSJSONWritingPrettyPrinted error:nil];
+                    _jsArg  = [[[NSString alloc] initWithData:d encoding:NSUTF8StringEncoding] copy];
+                }
+                else
+                    _jsArg =[[dict objectForKey:@"arg"] copy];
+            }
+            else
+            {
+                _jsArg = nil;
+            }
+            _oldVC = self.viewControllers[self.viewControllers.count -2];
+            
+        }
+        else{
+            isCloseEvent = NO;
+            _callJS = nil;
+            _jsArg = nil;
+        }
+    }
+    
+    
+    
+}
+
+
+
+
+-(void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if (isCloseEvent)
+    {
+        
+        if ([_oldVC isEqual:viewController])
+        {
+            
+            if (self.viewControllers.count==1)
+            {
+                RootViewController *rootview = (RootViewController *)viewController;
+                
+                if (![[rootview.selectedViewController class] isSubclassOfClass:[CordovaWebViewController class]])
+                {
+                    return;
+                }
+                _oldVC = (CordovaWebViewController *)rootview.selectedViewController;
+                
+            }
+            if (![[_oldVC class] isSubclassOfClass:[CordovaWebViewController class]])
+            {
+                return;
+            }
+            NSString *js = [NSString stringWithFormat:@"%@(%@)",_callJS,_jsArg?_jsArg:@""];
+            [((CordovaWebViewController *)_oldVC) callJS:js];
+            isCloseEvent = NO;
+            _jsArg=nil;
+            _callJS = nil;
+            _oldVC=nil;
+        }
+        
+    }
+    NSLog(@"viewlist显示的 %@",self.viewControllers);
+    
+}
 
 
 
@@ -89,17 +183,24 @@
 //注销
 -(void)LogOut
 {
-    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-    [center postNotificationName:Notification_USER_LOGOUT object:nil userInfo:nil];
-    
+
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"确定退出当前用户吗?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[AppInfo getInstance] ClearInfo];
+        [USER_DEFAULT setObject:@"" forKey:@"userpwd"];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginViewController *loginvc = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [UIApplication sharedApplication].keyWindow.rootViewController = loginvc;
+        [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        return ;
+    }];
  
-    [[AppInfo getInstance] ClearInfo];
-    [USER_DEFAULT setObject:@"" forKey:@"userpwd"];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    LoginViewController *loginvc = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-    [UIApplication sharedApplication].keyWindow.rootViewController = loginvc;
-    [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+    [alert addAction:action];
+    [alert addAction:action1];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 -(void)setStatusbarMode:(UIStatusBarStyle)statusmode

@@ -34,3 +34,14 @@ NSString * const SHAREINFO = @"SHAREINFO";
 
 //web图片分享
 NSString * const WEBPREVIEW = @"WEBPREVIEW";
+
+//设置角标
+NSString * const TABBARBADGE = @"TABBARBADGE";
+
+
+NSString * const EXITSYSTEM = @"EXITSYSTEM";
+
+
+
+
+

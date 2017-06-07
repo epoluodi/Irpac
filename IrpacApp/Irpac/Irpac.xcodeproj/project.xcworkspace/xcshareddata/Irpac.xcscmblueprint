@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "92CEE39E443A1DCC2E667A402ECF64B968758277",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++7101" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++7101" : 9223372036854775807,
+    "92CEE39E443A1DCC2E667A402ECF64B968758277" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "90BA9189-3A43-4D57-AE92-C467780DAEFC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++7101" : "",
+    "92CEE39E443A1DCC2E667A402ECF64B968758277" : "Irpac\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Irpac",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "IrpacApp\/Irpac\/Irpac.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/svn.r3soft.com\/svn\/r3soft",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "13e31bc5-647a-3c40-8cbf-c28339dd2a0d++7101"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/epoluodi\/Irpac.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "92CEE39E443A1DCC2E667A402ECF64B968758277"
+    }
+  ]
+}
