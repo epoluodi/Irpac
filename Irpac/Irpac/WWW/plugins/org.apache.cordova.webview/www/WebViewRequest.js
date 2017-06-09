@@ -43,6 +43,9 @@ cordova.define("com.suypower.stereo.suehome.CordovaPlugin.webview.WebViewRequest
         closeEvent: function(jsonparams) {
                      exec(null, null, "WebViewRequest", "closeEvent", [jsonparams]);
         },
+        openSignView: function(CallBackSuccess) {
+        exec(CallBackSuccess, null, "WebViewRequest", "openSignView", [null]);
+        },
     };
 
 });

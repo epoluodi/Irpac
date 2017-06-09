@@ -18,6 +18,9 @@ cordova.define("com.suypower.stereo.suehome.CordovaPlugin.file.FileRequest", fun
         upload: function(jsonparams,getRequestHeaderCallBackSuccess,getRequestHeaderCallBackFail) {
             exec(getRequestHeaderCallBackSuccess, getRequestHeaderCallBackFail, "FileRequest", "upload", jsonparams);
         },
+        uploadSign: function(jsonparams,getRequestHeaderCallBackSuccess,getRequestHeaderCallBackFail) {
+        exec(getRequestHeaderCallBackSuccess, getRequestHeaderCallBackFail, "FileRequest", "uploadSign", jsonparams);
+        },
         //下载
         download: function(jsonparams,getRequestHeaderCallBackSuccess,getRequestHeaderCallBackFail) {
             exec(getRequestHeaderCallBackSuccess, getRequestHeaderCallBackFail, "FileRequest", "download", jsonparams);
