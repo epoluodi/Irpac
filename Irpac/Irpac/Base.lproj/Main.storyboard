@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tzQ-Eg-eds">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,7 +51,7 @@
                         <viewControllerLayoutGuide type="bottom" id="pq8-GE-e5c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ACo-Sw-Rjz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -69,7 +69,7 @@
                         <viewControllerLayoutGuide type="bottom" id="p3A-xg-4eg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LhJ-tn-oiQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -93,6 +93,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dq6-fW-mII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2138" y="87"/>
+        </scene>
+        <!--Sign View Controller-->
+        <scene sceneID="Etj-1L-1zo">
+            <objects>
+                <viewController storyboardIdentifier="signviewcontroller" id="dMP-kw-zUd" customClass="SignViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uyw-qo-0dF"/>
+                        <viewControllerLayoutGuide type="bottom" id="W0P-zO-NMI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a9l-Ap-N7W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dti-DJ-vDj">
+                                <rect key="frame" x="16" y="36" width="382" height="610"/>
+                                <subviews>
+                                    <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzk-3z-KVw" customClass="PPSSignatureView">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="610"/>
+                                    </glkView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Jzk-3z-KVw" secondAttribute="trailing" id="3qU-KY-o3I"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jzk-3z-KVw" secondAttribute="bottom" id="54D-X1-AlA"/>
+                                    <constraint firstItem="Jzk-3z-KVw" firstAttribute="leading" secondItem="dti-DJ-vDj" secondAttribute="leading" id="uKK-HN-zhV"/>
+                                    <constraint firstItem="Jzk-3z-KVw" firstAttribute="top" secondItem="dti-DJ-vDj" secondAttribute="top" id="wV8-jQ-O4R"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dti-DJ-vDj" firstAttribute="leading" secondItem="a9l-Ap-N7W" secondAttribute="leading" constant="16" id="DfU-b0-P3O"/>
+                            <constraint firstAttribute="trailing" secondItem="dti-DJ-vDj" secondAttribute="trailing" constant="16" id="O33-xw-wLV"/>
+                            <constraint firstItem="dti-DJ-vDj" firstAttribute="top" secondItem="uyw-qo-0dF" secondAttribute="bottom" constant="16" id="V26-Vc-WBO"/>
+                            <constraint firstItem="W0P-zO-NMI" firstAttribute="top" secondItem="dti-DJ-vDj" secondAttribute="bottom" constant="90" id="ZhG-sw-zBY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backview" destination="dti-DJ-vDj" id="WHG-qj-FIb"/>
+                        <outlet property="signview" destination="Jzk-3z-KVw" id="AFY-Ub-dOp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k7b-vf-WCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1382.608695652174" y="975.81521739130437"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="DtT-b3-0wQ">
@@ -123,7 +168,7 @@
                         <viewControllerLayoutGuide type="bottom" id="sjs-Ag-9aC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lwg-mb-1IB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -142,7 +187,7 @@
                         <viewControllerLayoutGuide type="bottom" id="A8R-5s-f62"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dKE-Cp-LFQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -161,7 +206,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Fu7-38-ZvX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iTP-f1-ioi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -180,21 +225,21 @@
                         <viewControllerLayoutGuide type="bottom" id="nVH-Rq-Jzu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="a6A-DJ-nnj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user.png" translatesAutoresizingMaskIntoConstraints="NO" id="sKD-eG-5TK" customClass="STImageView">
-                                <rect key="frame" x="142.5" y="105" width="90" height="90"/>
+                                <rect key="frame" x="162" y="105" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="Ti5-D7-z4t"/>
                                     <constraint firstAttribute="height" constant="90" id="x0V-cL-Rer"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NqR-Y4-ad9">
-                                <rect key="frame" x="0.0" y="218" width="375" height="105"/>
+                                <rect key="frame" x="0.0" y="218" width="414" height="105"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://www.baidu/com" placeholder="用户名/手机号" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1K5-E6-xS6">
-                                        <rect key="frame" x="8" y="8" width="359" height="37"/>
+                                        <rect key="frame" x="8" y="8" width="398" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="hML-ub-qtT"/>
                                         </constraints>
@@ -203,7 +248,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dyD-oY-6xC">
-                                        <rect key="frame" x="8" y="62" width="359" height="35"/>
+                                        <rect key="frame" x="8" y="62" width="398" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="6og-z8-0OU"/>
                                         </constraints>
@@ -224,7 +269,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhc-ca-lpA">
-                                <rect key="frame" x="16" y="352" width="343" height="45"/>
+                                <rect key="frame" x="16" y="352" width="382" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="n9i-ow-Zf7"/>
                                 </constraints>
@@ -237,7 +282,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="江苏苏源高科技有限公司 技术支持" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfB-jr-ahl">
-                                <rect key="frame" x="20" y="626" width="335" height="21"/>
+                                <rect key="frame" x="20" y="695" width="374" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Bep-CM-2Ao"/>
                                 </constraints>
@@ -280,11 +325,11 @@
     </scenes>
     <resources>
         <image name="default_user.png" width="100" height="100"/>
-        <image name="tab1" width="27" height="27"/>
-        <image name="tab1_1" width="27" height="27"/>
-        <image name="tab2" width="27" height="27"/>
-        <image name="tab2_2" width="27" height="27"/>
-        <image name="tab4" width="27" height="27"/>
-        <image name="tab4_4" width="27" height="27"/>
+        <image name="tab1" width="25" height="25"/>
+        <image name="tab1_1" width="25" height="25"/>
+        <image name="tab2" width="25" height="25"/>
+        <image name="tab2_2" width="25" height="25"/>
+        <image name="tab4" width="25" height="25"/>
+        <image name="tab4_4" width="25" height="25"/>
     </resources>
 </document>

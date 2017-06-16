@@ -10,7 +10,7 @@
 
 #define HOST @"http://120.26.101.38:8081/riskControl/app" 
 #define HOST1 @"http://120.26.101.38:8081/riskControl"
-
+//#define HOST1 @"http://192.168.0.77:8080/Irpac"
 
 
 

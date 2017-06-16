@@ -139,6 +139,8 @@
 		B4E971E71E1C8A5600B2C04E /* MediaRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E971E61E1C8A5600B2C04E /* MediaRecord.m */; };
 		B4E971EA1E1C911700B2C04E /* RecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E971E91E1C911700B2C04E /* RecordView.m */; };
 		B4E971EC1E1CD42400B2C04E /* recordaudio.png in Resources */ = {isa = PBXBuildFile; fileRef = B4E971EB1E1CD42400B2C04E /* recordaudio.png */; };
+		B4EE6BCE1EF2A28500B7A89D /* PPSSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EE6BCD1EF2A28500B7A89D /* PPSSignatureView.m */; };
+		B4EE6BD11EF2A2B600B7A89D /* SignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EE6BD01EF2A2B600B7A89D /* SignViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -374,6 +376,10 @@
 		B4E971E81E1C911700B2C04E /* RecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecordView.h; path = CustomerVIew/RecordView.h; sourceTree = "<group>"; };
 		B4E971E91E1C911700B2C04E /* RecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecordView.m; path = CustomerVIew/RecordView.m; sourceTree = "<group>"; };
 		B4E971EB1E1CD42400B2C04E /* recordaudio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recordaudio.png; sourceTree = "<group>"; };
+		B4EE6BCC1EF2A28500B7A89D /* PPSSignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSSignatureView.h; sourceTree = "<group>"; };
+		B4EE6BCD1EF2A28500B7A89D /* PPSSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSSignatureView.m; sourceTree = "<group>"; };
+		B4EE6BCF1EF2A2B600B7A89D /* SignViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignViewController.h; sourceTree = "<group>"; };
+		B4EE6BD01EF2A2B600B7A89D /* SignViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,6 +482,8 @@
 		B46364F51DCB397E001DCAFD /* CustomerView */ = {
 			isa = PBXGroup;
 			children = (
+				B4EE6BCC1EF2A28500B7A89D /* PPSSignatureView.h */,
+				B4EE6BCD1EF2A28500B7A89D /* PPSSignatureView.m */,
 				B485E09F1DE29E9C0096F4C6 /* AMAnimatedNumber.h */,
 				B485E0A01DE29E9C0096F4C6 /* AMAnimatedNumber.m */,
 				B46E26D01DDBFE3D002B87B7 /* CommentsView */,
@@ -499,6 +507,8 @@
 				B41F53171E9CD396007E8302 /* MustConfigViewController.m */,
 				B4DBECC31EB18CE800180A7E /* ShareSheet.h */,
 				B4DBECC41EB18CE800180A7E /* ShareSheet.m */,
+				B4EE6BCF1EF2A2B600B7A89D /* SignViewController.h */,
+				B4EE6BD01EF2A2B600B7A89D /* SignViewController.m */,
 			);
 			name = CustomerView;
 			sourceTree = "<group>";
@@ -970,6 +980,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4CF48D11DC8990300EBC0D9 /* BaseTableViewCell.m in Sources */,
+				B4EE6BCE1EF2A28500B7A89D /* PPSSignatureView.m in Sources */,
 				B47CADF51E1B7DC1009BF1E4 /* ToastView.m in Sources */,
 				B4E971EA1E1C911700B2C04E /* RecordView.m in Sources */,
 				B4084DD41E2760E4002B32AA /* FileRequest.m in Sources */,
@@ -1008,6 +1019,7 @@
 				B479596A1DD9571A008902D7 /* ScanCodeView.m in Sources */,
 				B4B3C36B1DD5B688008363D6 /* FTPopOverMenu.m in Sources */,
 				B42337571EC1BC090049A870 /* WebPreviewViewController.m in Sources */,
+				B4EE6BD11EF2A2B600B7A89D /* SignViewController.m in Sources */,
 				B42337521EC1B93D0049A870 /* PreviewPlugin.m in Sources */,
 				B46364F81DCB39A5001DCAFD /* STImageView.m in Sources */,
 				B4808AEF1DD40FBC0089228B /* SingleWebViewController.m in Sources */,

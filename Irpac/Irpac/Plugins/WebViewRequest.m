@@ -45,4 +45,12 @@
         [cdv OnMessage:SETBARRIGHT command:command];
     }];
 }
+
+-(void)openSignView:(CDVInvokedUrlCommand *)command
+{
+    CDVViewController *cdv = (CDVViewController *)self.viewController;
+    [self.commandDelegate runInBackground:^{
+        [cdv OnMessage:OPENSIGNVIEW command:command];
+    }];
+}
 @end

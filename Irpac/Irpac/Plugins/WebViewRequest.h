@@ -23,4 +23,8 @@
 
 //设置右上角菜单
 -(void)setBarRight:(CDVInvokedUrlCommand *)command;
+
+//显示签名
+-(void)openSignView:(CDVInvokedUrlCommand *)command;
+
 @end

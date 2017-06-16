@@ -12,6 +12,7 @@
 #import <Common/PublicCommon.h>
 #import "WebPreviewViewController.h"
 #import "RootViewController.h"
+#import "SignViewController.h"
 
 
 @interface CordovaWebViewController ()
@@ -562,6 +563,16 @@
             [((MainRootViewController *)(self.navigationController)) LogOut];
     
         });
+    }else if ([Action isEqualToString:OPENSIGNVIEW])
+    {
+       
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        SignViewController *_signvc =(SignViewController*)[storyboard instantiateViewControllerWithIdentifier:@"signviewcontroller"];
+        _signvc.delegate = self;
+        _signvc.jsFun =(NSString *)[command.arguments objectAtIndex:0];
+        MAIN(^{
+            [self presentViewController:_signvc animated:YES completion:nil];
+        });
     }
     
     
@@ -570,7 +581,11 @@
 #pragma mark 图片选择
 
 
-
+-(void)saveSignImg:(NSString *)mediaid jsFun:(NSString *)js
+{
+    [self callJS:[NSString stringWithFormat:@"%@('%@')",js,mediaid]];
+    
+}
 //图片选择
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {

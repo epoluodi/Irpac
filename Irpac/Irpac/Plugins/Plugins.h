@@ -41,3 +41,5 @@ extern NSString *const WEBPREVIEW;
 extern NSString *const TABBARBADGE;
 
 extern NSString *const EXITSYSTEM;
+
+extern NSString *const OPENSIGNVIEW;

@@ -66,4 +66,6 @@ typedef enum : NSUInteger {
 -(void)callJS:(NSString *)js;
 
 -(void)webSelectPhoneBook:(NSString *)selects;
+
+-(void)saveSignImg:(NSString *)mediaid jsFun:(NSString *)js;
 @end

@@ -41,7 +41,7 @@ NSString * const TABBARBADGE = @"TABBARBADGE";
 
 NSString * const EXITSYSTEM = @"EXITSYSTEM";
 
-
+NSString * const OPENSIGNVIEW = @"opensignview";
 
 
 
