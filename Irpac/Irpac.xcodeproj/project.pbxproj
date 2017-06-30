@@ -874,7 +874,7 @@
 				TargetAttributes = {
 					B47807B91D2B96E6004B0392 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 5N2FS332QQ;
+						DevelopmentTeam = XGYF5JYL9C;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -1146,7 +1146,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5N2FS332QQ;
+				DEVELOPMENT_TEAM = XGYF5JYL9C;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1166,7 +1166,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.suypower.Irpac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.njhd.Irpac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Irpac/Irpac-Bridging-Header.h";
@@ -1183,7 +1183,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 5N2FS332QQ;
+				DEVELOPMENT_TEAM = XGYF5JYL9C;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1203,7 +1203,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.suypower.Irpac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.njhd.Irpac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Irpac/Irpac-Bridging-Header.h";
