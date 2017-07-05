@@ -101,6 +101,7 @@
 		B49A7E711EBAC65700E9E172 /* report.png in Resources */ = {isa = PBXBuildFile; fileRef = B49A7E701EBAC65700E9E172 /* report.png */; };
 		B49B752C1E28674A004BB571 /* SentMessage.wav in Resources */ = {isa = PBXBuildFile; fileRef = B49B752B1E28674A004BB571 /* SentMessage.wav */; };
 		B49B75321E28C873004BB571 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49B75301E28C873004BB571 /* LaunchScreen.storyboard */; };
+		B4A193E61F0B32D70054FEE9 /* appico.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A193E51F0B32D70054FEE9 /* appico.png */; };
 		B4A641221DD317AC002BF258 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A641211DD317AC002BF258 /* InfoViewController.m */; };
 		B4A641251DD31805002BF258 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A641241DD31805002BF258 /* GroupViewController.m */; };
 		B4A6412A1DD32159002BF258 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A641291DD32159002BF258 /* BaseWebViewController.m */; };
@@ -114,6 +115,7 @@
 		B4BC801F1DDEF55D00352307 /* CommonInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BC801E1DDEF55D00352307 /* CommonInputViewController.m */; };
 		B4C349AD1E2F72C700C26429 /* t3_1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C349AC1E2F72C700C26429 /* t3_1_1.png */; };
 		B4C349AF1E2F736500C26429 /* t3_3_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C349AE1E2F736500C26429 /* t3_3_1.png */; };
+		B4C73DB41F0A419600DD016E /* welcome.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4C73DB31F0A419600DD016E /* welcome.jpg */; };
 		B4CB4B1B1DD0872100D6035E /* DBmanger.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4B1A1DD0872100D6035E /* DBmanger.m */; };
 		B4CF48A21DC8431000EBC0D9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CF48A11DC8431000EBC0D9 /* LoginViewController.m */; };
 		B4CF48AC1DC87BA000EBC0D9 /* my_fav.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CF48A61DC87BA000EBC0D9 /* my_fav.png */; };
@@ -314,6 +316,7 @@
 		B49A7E701EBAC65700E9E172 /* report.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = report.png; sourceTree = "<group>"; };
 		B49B752B1E28674A004BB571 /* SentMessage.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SentMessage.wav; sourceTree = "<group>"; };
 		B49B75311E28C873004BB571 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4A193E51F0B32D70054FEE9 /* appico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appico.png; sourceTree = "<group>"; };
 		B4A4AC951DCC862900956A81 /* HttpClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClass.h; sourceTree = "<group>"; };
 		B4A4AC961DCC862900956A81 /* info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = info.h; sourceTree = "<group>"; };
 		B4A4AC981DCC862900956A81 /* ReturnData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReturnData.h; sourceTree = "<group>"; };
@@ -342,6 +345,7 @@
 		B4BC801E1DDEF55D00352307 /* CommonInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonInputViewController.m; path = VIEW/CommonInputViewController.m; sourceTree = "<group>"; };
 		B4C349AC1E2F72C700C26429 /* t3_1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t3_1_1.png; sourceTree = "<group>"; };
 		B4C349AE1E2F736500C26429 /* t3_3_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = t3_3_1.png; sourceTree = "<group>"; };
+		B4C73DB31F0A419600DD016E /* welcome.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = welcome.jpg; sourceTree = "<group>"; };
 		B4CB4B191DD0872100D6035E /* DBmanger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBmanger.h; sourceTree = "<group>"; };
 		B4CB4B1A1DD0872100D6035E /* DBmanger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBmanger.m; sourceTree = "<group>"; };
 		B4CF48A01DC8431000EBC0D9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = VIEW/LoginViewController.h; sourceTree = "<group>"; };
@@ -424,6 +428,8 @@
 		B442284C1DB8C53800C3E5E4 /* png */ = {
 			isa = PBXGroup;
 			children = (
+				B4A193E51F0B32D70054FEE9 /* appico.png */,
+				B4C73DB31F0A419600DD016E /* welcome.jpg */,
 				B49A7E701EBAC65700E9E172 /* report.png */,
 				B4B14CB21E695EEB0033F3A3 /* jiantou_icon.png */,
 				B455D2131E53F0160036A4DF /* addfriend.png */,
@@ -926,6 +932,7 @@
 				B46450BA1DE68D720043DA6B /* t3_1.png in Resources */,
 				B47657721E1DE3AE00D8BF64 /* a_l3.png in Resources */,
 				B434031A1DDD4DEB005DC86D /* pl.png in Resources */,
+				B4C73DB41F0A419600DD016E /* welcome.jpg in Resources */,
 				B485E0AA1DE2F0AE0096F4C6 /* comment.png in Resources */,
 				B49B75321E28C873004BB571 /* LaunchScreen.storyboard in Resources */,
 				B476F7D81DF5528F00544C01 /* t7.png in Resources */,
@@ -963,6 +970,7 @@
 				B47CADFB1E1B9659009BF1E4 /* chat_defalut_picture.png in Resources */,
 				B488ED7F1DF65BA600AC64C3 /* input_picture.png in Resources */,
 				5C1567AC1E15679F007E634D /* uncheck.png in Resources */,
+				B4A193E61F0B32D70054FEE9 /* appico.png in Resources */,
 				B4CF48CE1DC897BD00EBC0D9 /* qrcode.png in Resources */,
 				B47657711E1DE3AE00D8BF64 /* a_l2.png in Resources */,
 				B4DBECCD1EB1E24E00180A7E /* sharecopy.png in Resources */,

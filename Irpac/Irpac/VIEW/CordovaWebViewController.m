@@ -589,7 +589,7 @@
 //图片选择
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [info valueForKey:UIImagePickerControllerEditedImage];
     NSLog(@"SMILE!");
     
     NSData *jpgdata = UIImageJPEGRepresentation(image, 0.5);

@@ -14,6 +14,6 @@
 //文件上传
 -(void)upload:(CDVInvokedUrlCommand *)command;
 
-
+-(void)uploadSign:(CDVInvokedUrlCommand *)command;
 
 @end

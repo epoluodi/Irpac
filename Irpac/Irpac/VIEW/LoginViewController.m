@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    nickimg.hidden=YES;
+
     [nickimg setRadius];
     
     btnlogin.layer.cornerRadius=4;
@@ -57,11 +57,11 @@
     
 
     userpwd.delegate=self;
-    NSString *userimg = [USER_DEFAULT stringForKey:username.text];
-    if (userimg)
-    {
-        [nickimg setMediaIdLoadImg:userimg filesize:@""];
-    }
+//    NSString *userimg = [USER_DEFAULT stringForKey:username.text];
+//    if (userimg)
+//    {
+//        [nickimg setMediaIdLoadImg:userimg filesize:@""];
+//    }
     
     if (iPhone4){
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardWillShowNotification object:nil];
