@@ -56,6 +56,7 @@ static AppInfo *_self;
         [USER_DEFAULT setObject:@"" forKey:@"username"];
         [USER_DEFAULT setObject:@"" forKey:@"userpwd"];
         [USER_DEFAULT setObject:@"" forKey:@"token"];
+        [USER_DEFAULT setObject:@"" forKey:@"serverUrl"];
         [USER_DEFAULT synchronize];
         _userinfo.loginName = @"";
         _userinfo.loginPwd=@"";

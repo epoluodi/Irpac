@@ -14,7 +14,7 @@
 
 @interface LoginViewController ()
 {
-
+  
 }
 @end
 
@@ -23,6 +23,7 @@
 @synthesize loginview;
 @synthesize btnlogin;
 @synthesize nickimg;
+@synthesize serverUrl;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -54,6 +55,7 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeInputboard)];
     [self.view addGestureRecognizer:tap];
+    serverUrl.text  = [USER_DEFAULT objectForKey:@"serverUrl"];
     
 
     userpwd.delegate=self;
@@ -70,7 +72,8 @@
     }
     
     
-    // Do any additional setup after loading the view.
+
+        // Do any additional setup after loading the view.
 }
 
 
@@ -159,6 +162,12 @@
     
     
     [self closeInputboard];
+    
+    if (![serverUrl.text isEqualToString:@""])
+    {
+        [USER_DEFAULT setObject:serverUrl.text forKey:@"serverUrl"];
+    }
+    
     if ([username.text isEqualToString:@""] )
     {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"请输入账号" preferredStyle:UIAlertControllerStyleAlert];

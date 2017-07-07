@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnlogin;
 
 @property (weak, nonatomic) IBOutlet UIView *loginview;
+@property (weak, nonatomic) IBOutlet UITextField *serverUrl;
 
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *top1;
