@@ -59,7 +59,7 @@
     
     _JSLIst = [[NSMutableArray alloc] init];
     
-
+    [self addWebRefresh];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFont:) name:Notification_CHANGEFONT object:nil];
     // Do any additional setup after loading the view.
@@ -261,6 +261,22 @@
         });
         
         
+    }else if ([Action isEqualToString:WEBREFRESH])
+    {
+
+        NSDictionary *d = [command.arguments objectAtIndex:0];
+        if ([[d objectForKey:@"enable"] isEqualToString:@"true"])
+        {
+            [self addWebRefresh];
+        }
+        else
+        {
+            [refreshcontrol  removeFromSuperview];
+            refreshcontrol = nil;
+        }
+  
+        
+    
     }else if ([Action isEqualToString:CLOSEWINDOWS])//关闭窗口
     {
         if (_viewmode == TABVIEWCONTROLLERMODE)
@@ -279,7 +295,12 @@
             
             [center postNotificationName:Notification_CLOSEVIEWCONTROLLER object:nil userInfo:dict];
             
-            [self.navigationController popViewControllerAnimated:YES];
+       
+            __weak typeof(self) weakself = self;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weakself.navigationController popViewControllerAnimated:YES];
+            });
+        
         });
         
     }else if ([Action isEqualToString:CLOSEEVENT])//注册  关闭事件
@@ -738,8 +759,23 @@
 
 #pragma mark -
 
+-(void)addWebRefresh
+{
+    if (!refreshcontrol){
+        refreshcontrol = [[UIRefreshControl alloc] init];
+        [self.webView.scrollView addSubview:refreshcontrol];
+        [refreshcontrol addTarget:self action:@selector(refreshChange) forControlEvents:UIControlEventValueChanged];
+    }
+}
 
-
+-(void)refreshChange
+{
+    if (refreshcontrol.refreshing)
+    {
+        [self.webView reload];
+        [refreshcontrol endRefreshing];
+    }
+}
 /*
  #pragma mark - Navigation
  

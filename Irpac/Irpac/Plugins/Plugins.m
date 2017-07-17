@@ -43,5 +43,5 @@ NSString * const EXITSYSTEM = @"EXITSYSTEM";
 
 NSString * const OPENSIGNVIEW = @"opensignview";
 
-
+NSString * const WEBREFRESH = @"WEBREFRESH";
 

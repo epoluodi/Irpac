@@ -23,7 +23,7 @@
 @synthesize loginview;
 @synthesize btnlogin;
 @synthesize nickimg;
-@synthesize serverUrl;
+@synthesize btnserverurl;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -55,7 +55,17 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeInputboard)];
     [self.view addGestureRecognizer:tap];
-    serverUrl.text  = [USER_DEFAULT objectForKey:@"serverUrl"];
+    
+    if ([[USER_DEFAULT objectForKey:@"serverUrl"] isEqualToString:@""])
+    {
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self ClickserverUrl:nil];
+            
+        });
+    }
+    
+
     
 
     userpwd.delegate=self;
@@ -158,15 +168,36 @@
 //}
 
 
+- (IBAction)ClickserverUrl:(id)sender {
+    
+    UIAlertController *alert =[UIAlertController alertControllerWithTitle:@"服务器地址" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        serverUrl = textField;
+        serverUrl.text = [USER_DEFAULT objectForKey:@"serverUrl"];
+    }];
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        if ([serverUrl.text isEqualToString:@""])
+        {
+            
+            return ;
+        }
+        [USER_DEFAULT setObject:serverUrl.text forKey:@"serverUrl"];
+    }];
+    
+    [alert addAction:action1];
+    [alert addAction:action2];
+    [self presentViewController:alert animated:YES completion:nil];
+
+    
+}
+
 - (IBAction)ClickLogin:(id)sender {
     
     
     [self closeInputboard];
     
-    if (![serverUrl.text isEqualToString:@""])
-    {
-        [USER_DEFAULT setObject:serverUrl.text forKey:@"serverUrl"];
-    }
+
     
     if ([username.text isEqualToString:@""] )
     {

@@ -72,7 +72,7 @@
 {
     NSLog(@"通知 %@",notification);
     CordovaWebViewController *cordovaview;
-    if ([notification.name isEqualToString:@"closeViewController"])
+    if ([notification.name isEqualToString:Notification_CLOSEVIEWCONTROLLER])
     {
         if (self.viewControllers.count==2)
         {
@@ -81,7 +81,12 @@
         }
         else
         {
-            cordovaview =self.viewControllers[self.viewControllers.count -2];
+            if (self.viewControllers.count==2)
+            {
+                cordovaview =self.viewControllers[self.viewControllers.count -1];
+            }
+            else
+                cordovaview =self.viewControllers[self.viewControllers.count -2];
         }
         if (![[cordovaview class] isSubclassOfClass:[CordovaWebViewController class]])
             return;
@@ -108,7 +113,13 @@
             {
                 _jsArg = nil;
             }
-            _oldVC = self.viewControllers[self.viewControllers.count -2];
+            
+            if (self.viewControllers.count == 2)
+            {
+                _oldVC = self.viewControllers[self.viewControllers.count-1];
+            }
+            else
+                _oldVC = self.viewControllers[self.viewControllers.count -2];
             
         }
         else{

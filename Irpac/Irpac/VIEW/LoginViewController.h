@@ -13,6 +13,7 @@
 @interface LoginViewController : UIViewController<AutoLoginDelegate,UITextFieldDelegate>
 {
     ToastView *hud;
+    UITextField *serverUrl;
 }
 
 @property (weak, nonatomic) IBOutlet STImageView *nickimg;
@@ -22,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnlogin;
 
 @property (weak, nonatomic) IBOutlet UIView *loginview;
-@property (weak, nonatomic) IBOutlet UITextField *serverUrl;
+@property (weak, nonatomic) IBOutlet UIButton *btnserverurl;
 
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *top1;
@@ -31,6 +32,7 @@
 
 
 
+- (IBAction)ClickserverUrl:(id)sender;
 - (IBAction)ClickLogin:(id)sender;
 
 @end

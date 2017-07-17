@@ -24,7 +24,13 @@
  
 }
 
-
+-(void)webrefresh:(CDVInvokedUrlCommand *)command
+{
+    CDVViewController *cdv = (CDVViewController *)self.viewController;
+    [self.commandDelegate runInBackground:^{
+        [cdv OnMessage:WEBREFRESH command:command];
+    }];
+}
 -(void)navbar:(CDVInvokedUrlCommand *)command
 {
     CDVViewController *cdv = (CDVViewController *)self.viewController;
@@ -82,6 +88,7 @@
         });
     }];
 }
+
 
 -(void)openAppStore:(CDVInvokedUrlCommand *)command
 {

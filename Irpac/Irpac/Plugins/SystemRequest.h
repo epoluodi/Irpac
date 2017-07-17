@@ -10,7 +10,7 @@
 #import "AppCommon.h"
 @interface SystemRequest : CDVPlugin
 {
-    
+
 }
 
 //设置标题
@@ -34,4 +34,5 @@
 
 //退出系统
 -(void)exitSystem:(CDVInvokedUrlCommand *)command;
+-(void)webrefresh:(CDVInvokedUrlCommand *)command;
 @end

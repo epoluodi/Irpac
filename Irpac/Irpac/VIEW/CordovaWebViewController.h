@@ -52,7 +52,7 @@ typedef enum : NSUInteger {
     NSString *_callbackid;
     
     ShareSheet *sharesheet;
-
+    UIRefreshControl *refreshcontrol ;
     
 }
 @property (assign) BOOL IsUserWebTitle;
