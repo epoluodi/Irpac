@@ -8,12 +8,12 @@
 
 
 
-//#define HOST @"http://app.njhd.com.cn/riskControl/app"
+//#define HOST @"http://192.168.0.124:8080/riskControl/app"
 //#define HOST1 @"http://app.njhd.com.cn/riskControl"
-//#define HOST1 @"http://192.168.0.77:8080/Irpac"
+#define HOST1 @"http://192.168.0.124:8080/Irpac"
 #import "AppCommon.h"
 #define HOST [NSString stringWithFormat:@"http://%@/riskControl/app",[USER_DEFAULT objectForKey:@"serverUrl"]]
-#define HOST1 [NSString stringWithFormat:@"http://%@/riskControl",[USER_DEFAULT objectForKey:@"serverUrl"]]
+//#define HOST1 [NSString stringWithFormat:@"http://%@/riskControl",[USER_DEFAULT objectForKey:@"serverUrl"]]
 
 
 
